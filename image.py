@@ -3,7 +3,7 @@
 import sys
 
 from PIL import Image
-from inky.inky_uc8159 import Inky
+from pathlib import Path
 
 testmode_file = Path("/frame/testmode.txt")
 
