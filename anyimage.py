@@ -5,8 +5,16 @@ import subprocess
 import os
 import time
 from PIL import Image
-from inky.inky_uc8159 import Inky
 from pathlib import Path
+
+my_file = Path("/frame/testmode.txt")
+if my_file.is_file():
+    # Are we in test mode with a Inky PHat?
+    from inky.inky_uc1683 import Inky #Inky phat for debugging
+    print("TESTING SETUP DETECTED")
+else:
+    from inky.inky_uc8159 import Inky #Inky impression
+
 
 inky = Inky()
 saturation = 0.5
