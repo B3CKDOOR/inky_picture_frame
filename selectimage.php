@@ -1,6 +1,6 @@
 <?php
 	$path = "mailpics"; // define foldername of the images
-	$fullpath = "/var/www/html/$path/"; 
+	$fullpath = "/frame/$path/"; 
     $mailimg_arr = explode("\n", shell_exec("sudo /bin/ls $path -I '*txt'")); // get all images in the folder as an array
 	
 	if(!empty($_GET['displayimg'])) { // when an image is clicked, display it on the picture frame
