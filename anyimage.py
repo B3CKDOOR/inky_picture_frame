@@ -23,7 +23,7 @@ imageargument = sys.argv[1]
 
 newimage=imageargument+'-'+timestamp+'.jpg'
 
-my_file = Path("~/testmode.txt")
+my_file = Path("/frame/testmode.txt")
 if my_file.is_file():
     # Are we in test mode with a Inky PHat?
     os.system('convert -resize 250x122 -auto-orient '+imageargument+' -gravity center -background white -extent 250x122 '+newimage) # this uses imagemagick to create a 250x122px image.
