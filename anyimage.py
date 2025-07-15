@@ -37,7 +37,7 @@ if testmode_file.is_file():
     os.system('convert -resize 250x122 -auto-orient '+imageargument+' -gravity center -background white -extent 250x122 '+newimage) # this uses imagemagick to create a 250x122px image.
 else:
     os.system('convert -resize 600x448 -auto-orient '+imageargument+' -gravity center -background white -extent 600x448 '+newimage) # this uses imagemagick to create a 600x448px image which is ready to be sent to the picture frame
-endif
+
 
 image = Image.open(newimage)
 
