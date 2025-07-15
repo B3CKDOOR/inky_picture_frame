@@ -17,7 +17,7 @@ class color:                # the color definition is just for prettier output o
 
 
 feed = feedparser.parse("http://www.tagesschau.de/xml/atom/") # define the feed to open
-htmldatei = "/home/pi/python_files/html/feed.htm"
+htmldatei = "~/frame/html/feed.htm"
 
 feed_entries = feed.entries
 

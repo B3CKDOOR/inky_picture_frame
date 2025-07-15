@@ -7,7 +7,7 @@ import hashlib
 from pathlib import Path
 
 
-savepath = "/home/pi/python_files/mailpics/" # define where the images are being saved
+savepath = "~/frame/mailpics/" # define where the images are being saved
 mailliste   = "mailids.txt"                  # define file name of the already read images
 mail_lines  = []
 my_file = Path(savepath+mailliste)
@@ -38,7 +38,7 @@ with MailBox('imap.gmail.com').login(user, password) as mailbox:
                
                 with open(savepath+msghash, 'wb') as f:
                     f.write(att.payload)
-                    subprocess.run(["/home/pi/python_files/anyimage.py", savepath+msghash])
+                    subprocess.run(["~/frame/anyimage.py", savepath+msghash])
                     subprocess.run(["rm", savepath+msghash]) # delete the original attachment file for space saving (it's still in your inbox of course) 
                     mail_lines.append(msghash)
 

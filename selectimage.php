@@ -5,8 +5,8 @@
 	
 	if(!empty($_GET['displayimg'])) { // when an image is clicked, display it on the picture frame
 		$img_arg = $fullpath . escapeshellcmd($_GET['displayimg']); 
-		shell_exec("sudo /home/pi/python_files/image.py $img_arg > /dev/null &"); // the image already has the right size so here we don't have to use anyimage.py
-		shell_exec("cp $img_arg /home/pi/python_files/recentimage/recent.jpg > /dev/null &"); // copy the image to the 'recentimage' folder so that we can revert back to it
+		shell_exec("sudo ~/frame/image.py $img_arg > /dev/null &"); // the image already has the right size so here we don't have to use anyimage.py
+		shell_exec("cp $img_arg ~/frame/recentimage/recent.jpg > /dev/null &"); // copy the image to the 'recentimage' folder so that we can revert back to it
 		$success = "<div class='alert alert-success' role='alert'><strong>Picture is being displayed!</strong><hr>This can take a little while.</div>";
 	}
 ?>

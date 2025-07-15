@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CWD='/home/pi/python_files/html' # path to your feeds.py
+CWD='~/frame/html' # path to your feeds.py
 python3 $CWD/feeds.py
 filename='feed.htm' # output name of the html file
-chromium-browser  --window-size=600,448 --hide-scrollbars --screenshot=/home/pi/python_files/html/screenshot.png --headless file://$CWD/$filename
-/home/pi/python_files/html/image.py /home/pi/python_files/html/screenshot.png
+chromium-browser  --window-size=600,448 --hide-scrollbars --screenshot=~/frame/html/screenshot.png --headless file://$CWD/$filename
+~/frame/html/image.py ~/frame/html/screenshot.png
