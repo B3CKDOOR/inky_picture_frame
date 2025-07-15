@@ -1,10 +1,10 @@
 www-data ALL=(ALL) NOPASSWD:/bin/tee
 www-data ALL=(ALL) NOPASSWD:/bin/systemctl restart dhcpcd
 www-data ALL=(ALL) NOPASSWD:/bin/systemctl stop hostapd
-www-data ALL=(ALL) NOPASSWD:~/frame/restartnetworkkillhotspot.sh
+www-data ALL=(ALL) NOPASSWD:/frame/restartnetworkkillhotspot.sh
 www-data ALL=(ALL) NOPASSWD:/sbin/iwlist
-www-data ALL=(ALL) NOPASSWD:~/frame/killhotspotnow.sh
-www-data ALL=(ALL) NOPASSWD:~/frame/checknetworkanddisplaysuccess.sh
-www-data ALL=(ALL) NOPASSWD:~/frame/image.py
+www-data ALL=(ALL) NOPASSWD:/frame/killhotspotnow.sh
+www-data ALL=(ALL) NOPASSWD:/frame/checknetworkanddisplaysuccess.sh
+www-data ALL=(ALL) NOPASSWD:/frame/image.py
 www-data ALL=(ALL) NOPASSWD:/bin/ls
-www-data ALL=(ALL) NOPASSWD:~/frame/mails/getmail.py
+www-data ALL=(ALL) NOPASSWD:/frame/mails/getmail.py

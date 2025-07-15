@@ -38,4 +38,4 @@ if len(sys.argv) > 2:
 
 inky.set_image(image, saturation=saturation)
 inky.show()
-os.system('cp '+newimage+ ' ~/frame/recent.jpg') # copy the file to the recentimage folder. I do that to be able to revert back to the latest image after displaying the current news for a limited time period
+os.system('cp '+newimage+ ' /frame/recent.jpg') # copy the file to the recentimage folder. I do that to be able to revert back to the latest image after displaying the current news for a limited time period
