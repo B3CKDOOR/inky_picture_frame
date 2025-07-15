@@ -3,9 +3,6 @@
         $fullpath = "/frame/$path/";
 
         $mailimg_arr = scandir($path);
-        foreach($mailimg_arr as $file) {
-        }
-
 
         if(!empty($_GET['displayimg'])) { // when an image is clicked, display it on the picture frame
                 $img_arg = $fullpath . escapeshellcmd($_GET['displayimg']);
@@ -15,7 +12,7 @@
         }
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -36,7 +33,7 @@
                 echo $success;
         }
         foreach($mailimg_arr as $img) { // list the pictures and link them to the GET parameter which triggers script execution
-                if(!empty($img)) {
+                if (preg_match('/^[^\.].*\.[a-zA-Z]+$/', $img)) {
                         echo "<a href='?displayimg=$img'><img src='$path/$img' class='float-start img-thumbnail img-fluid rounded' style='max-width:150px;margin:5px;'></a>\n";
                 }
         }
