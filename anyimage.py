@@ -7,8 +7,8 @@ import time
 from PIL import Image
 from pathlib import Path
 
-my_file = Path("/frame/testmode.txt")
-if my_file.is_file():
+testmode_file = Path("/frame/testmode.txt")
+if testmode_file.is_file():
     # Are we in test mode with a Inky PHat?
     from inky.inky_uc1683 import Inky #Inky phat for debugging
     print("TESTING SETUP DETECTED")
@@ -31,8 +31,7 @@ imageargument = sys.argv[1]
 
 newimage=imageargument+'-'+timestamp+'.jpg'
 
-my_file = Path("/frame/testmode.txt")
-if my_file.is_file():
+if testmode_file.is_file():
     # Are we in test mode with a Inky PHat?
     os.system('convert -resize 250x122 -auto-orient '+imageargument+' -gravity center -background white -extent 250x122 '+newimage) # this uses imagemagick to create a 250x122px image.
 else:
