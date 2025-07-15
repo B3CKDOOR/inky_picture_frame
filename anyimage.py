@@ -12,7 +12,6 @@ testmode_file = Path("/frame/testmode.txt")
 if testmode_file.is_file():
     # Are we in test mode with a Inky PHat?
     from inky.inky_ssd1608 import Inky #Inky phat for debugging
-    display = InkyPHAT('yellow')
     display.set_border(inky.YELLOW)
     print("TESTING SETUP DETECTED")
 else:
