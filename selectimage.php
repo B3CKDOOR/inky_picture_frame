@@ -27,6 +27,7 @@
   <body>
     <div class="container-sm" style="padding:20px;">
     <h1>Show picture</h1>
+    <t>Choose the picture you would like to be displayed:</t>
 
         <?php
         if(!empty($success)){
