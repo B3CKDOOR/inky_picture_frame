@@ -119,3 +119,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /.vs
+
+# Disable venv folder
+/venv
