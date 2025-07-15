@@ -45,7 +45,7 @@
 	</div>
 		
 		<!-- this part is not on github yet -->
-	<hr> 
+	<!--<hr> 
 	<p><a onclick="document.getElementById('wifilinkarea').style.display='block'"><span style="text-decoration:underline; cursor: pointer;">show further configuration</span> ⬇️</a>
 		<div id="wifilinkarea" style="display:none;">
 			
@@ -57,7 +57,7 @@
 		    <p class="card-text">Connect to WIFI network.</p>
 		  </div>
 		</div>
-	</div>
+	</div>-->
 			
 		</div>
 	</div>
