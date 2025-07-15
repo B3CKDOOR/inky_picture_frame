@@ -123,3 +123,4 @@ dmypy.json
 # Disable venv folder
 /venv
 /example.jpg
+/example.png
