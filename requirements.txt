@@ -7,3 +7,4 @@ numpy==2.2.1
 pillow==11.0.0
 sgmllib3k==1.0.0
 urllib3==2.5.0
+inky==2.1.0
