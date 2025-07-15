@@ -44,6 +44,10 @@ image = Image.open(newimage)
 if len(sys.argv) > 2:
     saturation = float(sys.argv[2])
 
-inky.set_image(image, saturation=saturation)
+if testmode_file.is_file():
+    # Are we in test mode with a Inky PHat?
+    inky.set_image(image)
+else:
+    inky.set_image(image, saturation=saturation)
 inky.show()
 os.system('cp '+newimage+ ' /frame/recent.jpg') # copy the file to the recentimage folder. I do that to be able to revert back to the latest image after displaying the current news for a limited time period
