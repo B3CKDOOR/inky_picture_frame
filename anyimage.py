@@ -10,17 +10,16 @@ from inky.auto import auto
 from inky import InkyPHAT
 
 testmode_file = Path("/frame/testmode.txt")
-inky = Inky()
+
 if testmode_file.is_file():
     # Are we in test mode with a Inky PHat?
     from inky.inky_ssd1608 import Inky #Inky phat for debugging
-    display.set_border(inky.YELLOW)
     print("TESTING SETUP DETECTED")
 else:
     from inky.inky_uc8159 import Inky #Inky impression
-    display.set_border(inky.WHITE)
     saturation = 0.5
 
+inky = Inky()
 timestamp=str(int(time.time()))
 
 if len(sys.argv) == 1:
@@ -47,8 +46,11 @@ if len(sys.argv) > 2:
 
 if testmode_file.is_file():
     # Are we in test mode with a Inky PHat?
+    display = InkyPHAT('yellow')
+    display.set_border(inky.YELLOW)
     inky.set_image(image)
 else:
+    display.set_border(inky.WHITE)
     inky.set_image(image, saturation=saturation)
 inky.show()
 os.system('cp '+newimage+ ' /frame/recent.jpg') # copy the file to the recentimage folder. I do that to be able to revert back to the latest image after displaying the current news for a limited time period
