@@ -6,6 +6,7 @@ import os
 import time
 from PIL import Image
 from pathlib import Path
+from inky.auto import auto
 
 testmode_file = Path("/frame/testmode.txt")
 if testmode_file.is_file():
