@@ -33,7 +33,7 @@
                 echo $success;
         }
         foreach($mailimg_arr as $img) { // list the pictures and link them to the GET parameter which triggers script execution
-                if (preg_match('/^[^\.].*\.[a-zA-Z]+$/', $img)) {
+                if (preg_match('/^[^\.][^\/]*\.(jpg|jpeg|png|gif|bmp|webp)$/i', $img)) {
                         echo "<a href='?displayimg=$img'><img src='$path/$img' class='float-start img-thumbnail img-fluid rounded' style='max-width:150px;margin:5px;'></a>\n";
                 }
         }
