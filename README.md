@@ -9,8 +9,8 @@ What you need:
 -------------------
 
 * Run the Pimoroni install script: https://github.com/pimoroni/inky for eInk support on your Pi
-* Install feedparser for the atom feed news script
-* Install imap_tools for the mail script
+* ~~Install feedparser (with pip) for the atom feed news script~~ (pre-installed in venv)
+* ~~Install imap_tools for the mail script~~ (pre-installed in venv)
 * Install ImageMagick for converting the image
 
 Files in this repository:
