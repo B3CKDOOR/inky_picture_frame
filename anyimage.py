@@ -10,7 +10,7 @@ from pathlib import Path
 testmode_file = Path("/frame/testmode.txt")
 if testmode_file.is_file():
     # Are we in test mode with a Inky PHat?
-    from inky.inky_uc1683 import Inky #Inky phat for debugging
+    from inky.inky_ssd1683 import Inky #Inky phat for debugging
     print("TESTING SETUP DETECTED")
 else:
     from inky.inky_uc8159 import Inky #Inky impression
