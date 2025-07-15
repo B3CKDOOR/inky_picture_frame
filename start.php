@@ -1,6 +1,6 @@
 <?php
 	if(isset($_GET['getmail'])) { // when you clicked on 'get mail' check if there is new mail and display the attachment
-		shell_exec("sudo /frame/mails/getmail.py > /dev/null &"); // run the 'get mail' script and redirect output to /dev/null so the page loads directly and doesn't wait until the execution of the python script is finished
+		shell_exec("sudo /frame/getmail.py > /dev/null &"); // run the 'get mail' script and redirect output to /dev/null so the page loads directly and doesn't wait until the execution of the python script is finished
 		$success = "<div class='alert alert-success' role='alert'><strong>E-Mails are being checked...</strong><hr>This can take a little while. When there's a new image, it will be displayed.</div>";
 	}
 ?>
