@@ -4,6 +4,8 @@ import sys
 
 from PIL import Image
 from pathlib import Path
+from inky.auto import auto
+from inky import InkyPHAT
 
 testmode_file = Path("/frame/testmode.txt")
 
