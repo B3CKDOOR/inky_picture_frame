@@ -15,7 +15,7 @@ if my_file.is_file():
     with open(my_file,"r") as f:
         mail_lines = [line.rstrip('\n') for line in f]
 
-pwfile = Path(savepath+"../maillogin.pwd")   # define file with username and password for the mail account
+pwfile = Path("/frame/maillogin.pwd")   # define file with username and password for the mail account
 if pwfile.is_file():
 	with open(pwfile,"r") as pf:
 		pw_lines = [line.rstrip('\n') for line in pf]
@@ -26,6 +26,9 @@ else:
 	quit()
 
 print(mail_lines)
+
+if not os.path.exists("/frame/mailpics"):
+    os.makedirs("/frame/mailpics")
 
 # get all attachments for each email from INBOX folder
 with MailBox('imap.gmail.com').login(user, password) as mailbox:
