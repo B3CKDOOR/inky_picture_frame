@@ -6,6 +6,7 @@ import os
 import time
 from PIL import Image
 from inky.inky_uc8159 import Inky
+from pathlib import Path
 
 inky = Inky()
 saturation = 0.5
@@ -22,7 +23,13 @@ imageargument = sys.argv[1]
 
 newimage=imageargument+'-'+timestamp+'.jpg'
 
-os.system('convert -resize 600x448 -auto-orient '+imageargument+' -gravity center -background white -extent 600x448 '+newimage) # this uses imagemagick to create a 600x448px image which is ready to be sent to the picture frame
+my_file = Path("~/testmode.txt")
+if my_file.is_file():
+    # Are we in test mode with a Inky PHat?
+    os.system('convert -resize 250x122 -auto-orient '+imageargument+' -gravity center -background white -extent 250x122 '+newimage) # this uses imagemagick to create a 250x122px image.
+else:
+    os.system('convert -resize 600x448 -auto-orient '+imageargument+' -gravity center -background white -extent 600x448 '+newimage) # this uses imagemagick to create a 600x448px image which is ready to be sent to the picture frame
+endif
 
 image = Image.open(newimage)
 
@@ -31,4 +38,4 @@ if len(sys.argv) > 2:
 
 inky.set_image(image, saturation=saturation)
 inky.show()
-os.system('cp '+newimage+ ' ~/recentimage/recent.jpg') # copy the file to the recentimage folder. I do that to be able to revert back to the latest image after displaying the current news for a limited time period
+os.system('cp '+newimage+ ' ~/frame/recent.jpg') # copy the file to the recentimage folder. I do that to be able to revert back to the latest image after displaying the current news for a limited time period
