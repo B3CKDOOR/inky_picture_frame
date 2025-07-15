@@ -7,8 +7,10 @@ import time
 from PIL import Image
 from pathlib import Path
 from inky.auto import auto
+from inky import InkyPHAT
 
 testmode_file = Path("/frame/testmode.txt")
+inky = Inky()
 if testmode_file.is_file():
     # Are we in test mode with a Inky PHat?
     from inky.inky_ssd1608 import Inky #Inky phat for debugging
@@ -18,10 +20,7 @@ if testmode_file.is_file():
 else:
     from inky.inky_uc8159 import Inky #Inky impression
     display.set_border(inky.WHITE)
-
-
-inky = Inky()
-saturation = 0.5
+    saturation = 0.5
 
 timestamp=str(int(time.time()))
 
