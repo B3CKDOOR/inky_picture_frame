@@ -43,7 +43,7 @@ with MailBox('imap.gmail.com').login(user, password) as mailbox:
                     mail_lines.append(msghash)
 
 print(mail_lines)
-with open(savepath+mailliste,"w") as fl: # save the mail in the 'alredy read list' so that it gets ignored in the next run
+with open(savepath+mailliste,"w") as fl: # save the mail in the 'already read list' so that it gets ignored in the next run
     for line in mail_lines:
         fl.write('%s\n' % line)
 
