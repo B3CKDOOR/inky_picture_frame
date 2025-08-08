@@ -127,3 +127,10 @@ dmypy.json
 
 # Dont upload images
 recent.jpg*
+
+# Dont upload backup files
+*.bak
+
+# Dont upload passwords
+maillogin.pwd
+*.pwd
