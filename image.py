@@ -37,6 +37,5 @@ if testmode_file.is_file():
     display.set_border(inky.YELLOW)
     inky.set_image(image)
 else:
-    display.set_border(inky.WHITE)
     inky.set_image(image, saturation=saturation)
 inky.show()

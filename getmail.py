@@ -38,7 +38,7 @@ with MailBox('imap.gmail.com').login(user, password) as mailbox:
         if msghash not in mail_lines:
             for att in msg.attachments:
                 print("Attachment from "+msg.from_+" received! Sending to picture frame...")
-               
+
                 with open(savepath+msghash, 'wb') as f:
                     f.write(att.payload)
                     subprocess.run(["/frame/anyimage.py", savepath+msghash])
